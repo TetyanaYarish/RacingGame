@@ -39,12 +39,16 @@ namespace RacingGame
             this.BackGround2 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.car1 = new System.Windows.Forms.PictureBox();
+            this.car2 = new System.Windows.Forms.PictureBox();
+            this.loseText = new System.Windows.Forms.Label();
+            this.buttonReStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackGround)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackGround2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxMain
@@ -67,7 +71,6 @@ namespace RacingGame
             this.playersCar.Click += new System.EventHandler(this.playersCar_Click);
             this.playersCar.DoubleClick += new System.EventHandler(this.playerCar_DoubleClick);
             this.playersCar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.playerCar_MouseClick);
-            this.playersCar.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.playersCar_PreviewKeyDown);
             // 
             // moving
             // 
@@ -116,12 +119,42 @@ namespace RacingGame
             this.car1.TabStop = false;
             this.car1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // car2
+            // 
+            this.car2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.car2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.car2.BackgroundImage = global::RacingGame.Properties.Resources.images__3_;
+            resources.ApplyResources(this.car2, "car2");
+            this.car2.Image = global::RacingGame.Properties.Resources.images__3_;
+            this.car2.Name = "car2";
+            this.car2.TabStop = false;
+            // 
+            // loseText
+            // 
+            resources.ApplyResources(this.loseText, "loseText");
+            this.loseText.BackColor = System.Drawing.Color.Yellow;
+            this.loseText.ForeColor = System.Drawing.Color.Red;
+            this.loseText.Name = "loseText";
+            this.loseText.UseCompatibleTextRendering = true;
+            // 
+            // buttonReStart
+            // 
+            this.buttonReStart.BackColor = System.Drawing.SystemColors.HotTrack;
+            resources.ApplyResources(this.buttonReStart, "buttonReStart");
+            this.buttonReStart.ForeColor = System.Drawing.Color.Purple;
+            this.buttonReStart.Name = "buttonReStart";
+            this.buttonReStart.UseVisualStyleBackColor = false;
+            this.buttonReStart.Click += new System.EventHandler(this.buttonReStart_Click);
+            // 
             // bg1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImage = global::RacingGame.Properties.Resources.Road;
+            this.Controls.Add(this.buttonReStart);
+            this.Controls.Add(this.loseText);
+            this.Controls.Add(this.car2);
             this.Controls.Add(this.car1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.playersCar);
@@ -132,6 +165,7 @@ namespace RacingGame
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "bg1";
             this.Load += new System.EventHandler(this.bg1_Load);
+            this.DoubleClick += new System.EventHandler(this.pictureBox1_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bg1_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).EndInit();
@@ -140,6 +174,7 @@ namespace RacingGame
             ((System.ComponentModel.ISupportInitialize)(this.BackGround)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackGround2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +190,9 @@ namespace RacingGame
         private System.Windows.Forms.PictureBox BackGround2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox car1;
+        private System.Windows.Forms.PictureBox car2;
+        private System.Windows.Forms.Label loseText;
+        private System.Windows.Forms.Button buttonReStart;
     }
 }
 

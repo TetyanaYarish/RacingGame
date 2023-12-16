@@ -142,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxMain.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="playersCar.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -151,10 +151,10 @@
     <value>NoControl</value>
   </data>
   <data name="playersCar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 345</value>
+    <value>180, 392</value>
   </data>
   <data name="playersCar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 33</value>
+    <value>47, 34</value>
   </data>
   <data name="playersCar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -172,7 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;playersCar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <metadata name="moving.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -199,7 +199,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxBG.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="BackGround.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 1</value>
@@ -220,7 +220,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BackGround.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="BackGround2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -244,7 +244,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BackGround2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>58, 1</value>
@@ -268,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="car1.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, -50</value>
@@ -292,6 +292,96 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;car1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="car2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="car2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 171</value>
+  </data>
+  <data name="car2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 32</value>
+  </data>
+  <data name="car2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="car2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;car2.Name" xml:space="preserve">
+    <value>car2</value>
+  </data>
+  <data name="&gt;&gt;car2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;car2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;car2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="loseText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="loseText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Montserrat Black, 15pt</value>
+  </data>
+  <data name="loseText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 41</value>
+  </data>
+  <data name="loseText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 0</value>
+  </data>
+  <data name="loseText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 33</value>
+  </data>
+  <data name="loseText.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="loseText.Text" xml:space="preserve">
+    <value>YOU LOST!</value>
+  </data>
+  <data name="&gt;&gt;loseText.Name" xml:space="preserve">
+    <value>loseText</value>
+  </data>
+  <data name="&gt;&gt;loseText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;loseText.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;loseText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonReStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Montserrat Black, 15pt</value>
+  </data>
+  <data name="buttonReStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 90</value>
+  </data>
+  <data name="buttonReStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="buttonReStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 33</value>
+  </data>
+  <data name="buttonReStart.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="buttonReStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;buttonReStart.Name" xml:space="preserve">
+    <value>buttonReStart</value>
+  </data>
+  <data name="&gt;&gt;buttonReStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonReStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonReStart.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -305,9 +395,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>350, 450</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

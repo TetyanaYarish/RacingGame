@@ -14,6 +14,10 @@ namespace RacingGame
     {
         private Point pos;
         private bool dragging;
+        private int randomCar1PositionX { get; set; }
+        private int randomCar2PositionX { get; set; }
+        private int randomCar1PositionY { get; set; }
+        private int randomCar2PositionY { get; set; }
         public bg1()
         {
             InitializeComponent();
@@ -26,6 +30,9 @@ namespace RacingGame
             playersCar.MouseUp += MouseClickUp;
             BackGround.MouseUp += MouseClickUp;
             BackGround2.MouseUp += MouseClickUp;
+            loseText.Visible = false;
+            buttonReStart.Visible = false;
+            KeyPreview = true;
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -53,16 +60,29 @@ namespace RacingGame
             dragging = false;
 
         }
+        private void RandomPossition()
+        {
+
+            Random random = new Random();
+            randomCar1PositionY = random.Next(-75, -20);
+            randomCar2PositionY = random.Next(-175, -85);
+            int index1 = random.Next(4);
+            int index2 = random.Next(4);
+            if (index1 == index2) { index1 = 1; index2 = 3; }
+            int[] numbers= { 67, 121, 180, 234 };
+            randomCar1PositionX = numbers[index1];
+            randomCar2PositionX = numbers[index2];
+          
+        }
 
         private void moving_Tick(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int r = random.Next(-50, -20);
-            int l = random.Next(62, 280);
+            RandomPossition();
             int speed = 8;
             BackGround.Top += speed;
-            int car1speed = 7;
+          
             car1.Top += speed;
+            car2.Top += speed+1;
             BackGround2.Top += speed;
 
             if (BackGround.Top >= 50)
@@ -73,9 +93,18 @@ namespace RacingGame
             }
             if (car1.Top >= 450)
             {
-                car1.Top = r; car1.Left = l;
+            car1.Top = randomCar1PositionY;
+            car1.Left = randomCar1PositionX;
+            car2.Top = randomCar2PositionY;
+            car2.Left = randomCar2PositionX;
             }
-            // if (car1.Left >= 450) car1.Top = r;
+            if (playersCar.Bounds.IntersectsWith(car1.Bounds)|| playersCar.Bounds.IntersectsWith(car2.Bounds)) {
+                moving.Enabled=false;
+                loseText.Visible = true;
+                buttonReStart.Visible = true;
+
+            }
+            
         }
 
         private void bg1_Load(object sender, EventArgs e)
@@ -131,32 +160,8 @@ namespace RacingGame
 
         }
 
-        private void playersCar_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-
-        }
-
+      
         private void bg1_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            int speed = 10;
-            if ((e.KeyCode == Keys.Left) && playersCar.Left > 67)
-            {
-                playersCar.Left -= speed;
-            }
-
-            else if ((e.KeyCode == Keys.Right) && playersCar.Left < 235)
-            {
-                playersCar.Left += speed;
-            }
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -168,7 +173,7 @@ namespace RacingGame
 
         private void textBox1_KeyDown_1(object sender, KeyEventArgs e)
         {
-            int speed = 10;
+            int speed = 7;
             if ((e.KeyCode == Keys.Left) && playersCar.Left > 67)
             {
                 playersCar.Left -= speed;
@@ -187,6 +192,16 @@ namespace RacingGame
 
         private void BackGround2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonReStart_Click(object sender, EventArgs e)
+        {
+            //car1.Top = -100;
+            //car2.Top = -20;
+            buttonReStart.Visible = false;
+            loseText.Visible = false;
+            moving.Enabled = true;
 
         }
     }
