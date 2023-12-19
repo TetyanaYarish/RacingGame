@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace RacingGame
 {
     public partial class bg1 : Form
     {
         private Point pos;
-        private bool dragging;
+        private bool dragging, lose;
         private int randomCar1PositionX { get; set; }
         private int randomCar2PositionX { get; set; }
         private int randomCar1PositionY { get; set; }
         private int randomCar2PositionY { get; set; }
+        private int countCoins = 0;
         public bg1()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace RacingGame
             playersCar.MouseUp += MouseClickUp;
             BackGround.MouseUp += MouseClickUp;
             BackGround2.MouseUp += MouseClickUp;
-            loseText.Visible = false;
+
             buttonReStart.Visible = false;
             KeyPreview = true;
         }
@@ -69,10 +71,10 @@ namespace RacingGame
             int index1 = random.Next(4);
             int index2 = random.Next(4);
             if (index1 == index2) { index1 = 1; index2 = 3; }
-            int[] numbers= { 67, 121, 180, 234 };
+            int[] numbers = { 67, 121, 180, 234 };
             randomCar1PositionX = numbers[index1];
             randomCar2PositionX = numbers[index2];
-          
+
         }
 
         private void moving_Tick(object sender, EventArgs e)
@@ -80,11 +82,11 @@ namespace RacingGame
             RandomPossition();
             int speed = 8;
             BackGround.Top += speed;
-          
-            car1.Top += speed;
-            car2.Top += speed+1;
-            BackGround2.Top += speed;
 
+            car1.Top += speed;
+            car2.Top += speed + 1;
+            BackGround2.Top += speed;
+            coin.Top += speed;
             if (BackGround.Top >= 50)
             {
                 BackGround.Top = -20;
@@ -93,42 +95,35 @@ namespace RacingGame
             }
             if (car1.Top >= 450)
             {
-            car1.Top = randomCar1PositionY;
-            car1.Left = randomCar1PositionX;
-            car2.Top = randomCar2PositionY;
-            car2.Left = randomCar2PositionX;
+                car1.Top = randomCar1PositionY;
+                car1.Left = randomCar1PositionX;
+                car2.Top = randomCar2PositionY;
+                car2.Left = randomCar2PositionX;
             }
-            if (playersCar.Bounds.IntersectsWith(car1.Bounds)|| playersCar.Bounds.IntersectsWith(car2.Bounds)) {
-                moving.Enabled=false;
-                loseText.Visible = true;
+            if (playersCar.Bounds.IntersectsWith(car1.Bounds) || playersCar.Bounds.IntersectsWith(car2.Bounds))
+            {
+                moving.Enabled = false;
+
                 buttonReStart.Visible = true;
+                lose = true;
+
 
             }
-            
-        }
-
-        private void bg1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void playerCar_KeyDown(object sender, KeyEventArgs e)
-        {
-            int speed = 8;
-            if (e.KeyCode == Keys.Left)
+            if (coin.Top >= 450)
             {
-                playersCar.Left -= speed;
+                coin.Top = -50;
+                Random random = new Random();
+                coin.Left = random.Next(67, 234);
             }
-        }
-
-
-
-        private void pictureBox1_PreviewKeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            int speed = 8;
-            if (e.KeyCode == Keys.Right)
+            if (playersCar.Bounds.IntersectsWith(coin.Bounds))
             {
-                playersCar.Left -= speed;
+                countCoins++;
+                labelCoins.Text = "Coins: " + countCoins.ToString();
+                coin.Top = -50;
+                Random random = new Random();
+                coin.Left = random.Next(67, 234);
             }
+           
         }
 
 
@@ -160,19 +155,9 @@ namespace RacingGame
 
         }
 
-      
-        private void bg1_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void playersCar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_KeyDown_1(object sender, KeyEventArgs e)
         {
+            // if (lose) return;
             int speed = 7;
             if ((e.KeyCode == Keys.Left) && playersCar.Left > 67)
             {
@@ -183,26 +168,19 @@ namespace RacingGame
             {
                 playersCar.Left += speed;
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+            if (e.KeyCode == Keys.Up) moving.Enabled = true;// buttonReStart_Click.
 
         }
 
-        private void BackGround2_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void buttonReStart_Click(object sender, EventArgs e)
         {
-            //car1.Top = -100;
-            //car2.Top = -20;
             buttonReStart.Visible = false;
-            loseText.Visible = false;
-            moving.Enabled = true;
 
+            moving.Enabled = true;
+            SoundPlayer sound = new SoundPlayer();
+            lose = false;
         }
     }
 }

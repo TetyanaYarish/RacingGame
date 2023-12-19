@@ -246,28 +246,34 @@
   <data name="&gt;&gt;BackGround2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 1</value>
+  <data name="labelCoins.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
   </data>
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+  <data name="labelCoins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="labelCoins.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 20</value>
+  <data name="labelCoins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="labelCoins.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="labelCoins.Text" xml:space="preserve">
+    <value>Coins: 0</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;labelCoins.Name" xml:space="preserve">
+    <value>labelCoins</value>
+  </data>
+  <data name="&gt;&gt;labelCoins.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;labelCoins.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;labelCoins.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="car1.Location" type="System.Drawing.Point, System.Drawing">
@@ -321,56 +327,23 @@
   <data name="&gt;&gt;car2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="loseText.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="loseText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat Black, 15pt</value>
-  </data>
-  <data name="loseText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 41</value>
-  </data>
-  <data name="loseText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 0</value>
-  </data>
-  <data name="loseText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 33</value>
-  </data>
-  <data name="loseText.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="loseText.Text" xml:space="preserve">
-    <value>YOU LOST!</value>
-  </data>
-  <data name="&gt;&gt;loseText.Name" xml:space="preserve">
-    <value>loseText</value>
-  </data>
-  <data name="&gt;&gt;loseText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;loseText.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;loseText.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="buttonReStart.Font" type="System.Drawing.Font, System.Drawing">
     <value>Montserrat Black, 15pt</value>
   </data>
   <data name="buttonReStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 90</value>
+    <value>108, 41</value>
   </data>
   <data name="buttonReStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="buttonReStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 33</value>
+    <value>129, 33</value>
   </data>
   <data name="buttonReStart.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="buttonReStart.Text" xml:space="preserve">
-    <value>Start</value>
+    <value>RESTART</value>
   </data>
   <data name="&gt;&gt;buttonReStart.Name" xml:space="preserve">
     <value>buttonReStart</value>
@@ -382,6 +355,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonReStart.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="coin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 12</value>
+  </data>
+  <data name="coin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 26</value>
+  </data>
+  <data name="coin.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="coin.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;coin.Name" xml:space="preserve">
+    <value>coin</value>
+  </data>
+  <data name="&gt;&gt;coin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;coin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;coin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
