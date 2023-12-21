@@ -66,7 +66,7 @@ namespace RacingGame
             this.playersCar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.playersCar.BackgroundImage = global::RacingGame.Properties.Resources.car1;
             resources.ApplyResources(this.playersCar, "playersCar");
-            this.playersCar.Image = global::RacingGame.Properties.Resources.car1;
+            this.playersCar.Image = global::RacingGame.Properties.Resources.car11;
             this.playersCar.Name = "playersCar";
             this.playersCar.TabStop = false;
             this.playersCar.DoubleClick += new System.EventHandler(this.playerCar_DoubleClick);
@@ -120,13 +120,14 @@ namespace RacingGame
             // car2
             // 
             this.car2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.car2.BackColor = System.Drawing.SystemColors.GrayText;
+            this.car2.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.car2.BackgroundImage = global::RacingGame.Properties.Resources.images__3_;
             resources.ApplyResources(this.car2, "car2");
-            this.car2.Image = global::RacingGame.Properties.Resources.images__3_;
+            this.car2.Image = global::RacingGame.Properties.Resources.car_2;
+            this.car2.InitialImage = global::RacingGame.Properties.Resources.car21;
             this.car2.Name = "car2";
             this.car2.TabStop = false;
-          // 
+            // 
             // buttonReStart
             // 
             this.buttonReStart.BackColor = System.Drawing.SystemColors.HotTrack;
